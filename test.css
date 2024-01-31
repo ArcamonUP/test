@@ -1,0 +1,93 @@
+* {
+    background-color: rgb(20, 27, 51);
+    color: white;
+    font-family: sans-serif;
+    margin: 5px;
+}
+
+main {
+    box-sizing: border-box;
+}
+
+.slideshow-container {
+    max-width: 1700px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    color: #4A86E8;
+}
+
+.choix {
+    cursor: pointer;
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    border: 2px solid antiquewhite;
+    border-radius: 19px;
+    margin: auto;
+    transition: all 0.5s;
+    background-color: #4A86E8;
+    bottom: 35%;
+    right: 30%;
+}
+
+.choix:hover {
+    box-shadow: 1px 1px 4px antiquewhite;
+    transform: scale(1.1, 1.1)
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: grey;
+    border-radius: 50%;
+    bottom: 30px;
+    position: relative;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #4A86E8;
+}
+
+.slide {
+    animation-name: slide;
+    animation-duration: 2s;
+}
+
+@keyframes slide {
+    from {
+        transform : translateX(750px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
